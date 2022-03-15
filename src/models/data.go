@@ -36,7 +36,8 @@ type ArticleType struct {
 
 func init() {
 	//注册数据库
-	orm.RegisterDataBase("default", "mysql", "root:root@tcp(172.17.0.3:3306)/newsWeb")
+	//  mysql -h radondb-smileai-radondb-m-1.radondb-smileai-radondb-m -u qingcloud -p
+	orm.RegisterDataBase("default", "mysql", "qingcloud:Qing@123@tcp(radondb-smileai-radondb-m-1.radondb-smileai-radondb-m:3306)/newsWeb")
 	//注册表
 	orm.RegisterModel(new(User), new(Article), new(ArticleType))
 	//跑起来
