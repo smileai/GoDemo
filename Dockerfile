@@ -1,6 +1,9 @@
 FROM golang:alpine as builder
 LABEL maintainer="me@yellowei.com"
 COPY . /app
+COPY src/views /app/views
+COPY src/static /app/static
+COPY src/conf /app/conf
 WORKDIR /app
 RUN apk update && apk add git \
     && export GO111MODULE=on  \
