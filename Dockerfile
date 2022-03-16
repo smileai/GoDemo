@@ -11,5 +11,5 @@ RUN apk update && apk add git \
 FROM alpine:latest
 WORKDIR /app
 COPY --from=builder /app/app .
-EXPOSE 80
+EXPOSE 8080
 CMD ["./app"]
